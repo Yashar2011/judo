@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дзюдо – Путь Мягкости</title>
+  <style> </style>
+</head>
+<body>
+
+  <header>
+    <h1>Дзюдо — Путь Мягкости</h1>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Главная</a>
+    <a onclick="showSection('history')">История</a>
+    <a onclick="showSection('techniques')">Техники</a>
+ <a onclick="showSection('champions')">Мастера спорта</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Искусство Побеждать Без Насилия</h2>
+  </section>
+
+  <main class="content">
+    <section id="home" class="section">
+      <h3>Что такое Дзюдо?</h3>
+      <p>Дзюдо — японское боевое искусство, созданное Дзигоро Кано. Это не только спорт, но и способ духовного и физического развития.</p>
+      <img src="https://ulyssport.kz/cache/imagine/1200/uploads/news/2024/12/24/676a5d2050663444092092.jpg" alt="Юные дзюдоисты" />
+      <img src="https://sport.insure/upload/iblock/4d2/4d2d78dfb5ef5366bfd9fbe6877be487.jpg" alt="Бросок на соревнованиях" />
+    </section>
+
+    <section id="history" class="section hidden">
+      <h3>История Дзюдо</h3>
+      <p>Дзюдо произошло от древнего джиу-джитсу. Основатель Дзигоро Кано модернизировал традиционные техники, добавил философию и систему поясов.</p>
+      <img src="https://stuki-druki.com/aforizms/Jigoro-Kano-01.jpg" alt="Дзигоро Кано" />
+      <img src="https://preview.redd.it/training-at-the-kodokan-v0-90z9mpfvifz91.jpg?width=1080&crop=smart&auto=webp&s=7da8ba9e06a84b567330a7ab439c1e873e784e9c" alt="Тренировка в Кодокан" />
+    </section>
+
+    <section id="techniques" class="section hidden">
+      <h3>Основные Техники</h3>
+      <p>Дзюдо включает броски, удержания, болевые и удушающие приёмы. Всё основано на балансе и точности.</p>
+      <img src="https://storage.yandexcloud.net/s3-metaratings-storage/upload/sprint.editor/576/576fdadb0b5094d4c597bdcb7f6edebe.jpg" alt="Техника броска" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS64-CTdQ-nGMo0moDv8o7vqNntAJJjt5-qkA&s" alt="Удержание в дзюдо" />
+    </section>
+
+    <section id="contacts" class="section hidden">
+      <h3>Контакты и запись</h3>
+      <p>Запишитесь на тренировку в нашем клубе!</p>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Ваше имя" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Ваше сообщение..." rows="5"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Дзюдо-Клуб | Все права защищены
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Спасибо за сообщение! Мы с вами свяжемся.");
+    }
+  </script>
+  <section id="champions" class="section hidden">
+  <h3>Мастера спорта по дзюдо</h3>
+  <p>Мастера спорта — это выдающиеся дзюдоисты, достигшие высокого уровня мастерства и прославившие этот вид спорта на соревнованиях в России и по всему миру.</p>
+
+  <h4>🥇 Тадахиро Номура (Япония)</h4>
+  <p>Трёхкратный олимпийский чемпион (1996, 2000, 2004). Единственный дзюдоист в истории с тремя золотыми медалями Олимпиады.</p>
+  <img src="https://ss.sport-express.ru/userfiles/materials/2/29556/large.jpg" alt="Тадахиро Номура" />
+
+  <h4>🥈 Тагир Хайбулаев (Россия)</h4>
+  <p>Олимпийский чемпион Лондона 2012 года. Заслуженный мастер спорта России. Один из самых известных российских дзюдоистов.</p>
+  <img src="https://ss.sport-express.ru/userfiles/materials/37/376486/large.jpg" alt="Тагир Хайбулаев" />
+
+  <h4>🥉 Ришод Собиров (Узбекистан)</h4>
+  <p>Бронзовый призёр Олимпийских игр 2008 и 2012 годов, чемпион мира. Известен своей техникой и скоростью.</p>
+  <img src="https://www.olympic.uz/uploads/news/4f3c4bd3ef81f1255e23578312de41ae.jpg" alt="Ришод Собиров" />
+
+  <h4>💪 Дзигоро Кано (основатель дзюдо)</h4>
+  <p>Хотя он не был «мастером спорта» в современном смысле, Дзигоро Кано основал дзюдо и ввёл систему поясов. Его вклад — фундаментален.</p>
+  <img src="https://stuki-druki.com/aforizms/Jigoro-Kano-01.jpg" alt="Дзигоро Кано" />
+  <!-- Добавляем строку копирайта прямо в конец раздела -->
+  <div style="text-align: center; color: #666; font-size: 0.9em; margin-top: 40px;">
+    © 2025 Дзюдо-Клуб | Все права защищены
+  </div>
+</section>  
+</section>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
